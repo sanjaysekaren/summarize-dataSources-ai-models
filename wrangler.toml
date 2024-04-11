@@ -1,7 +1,7 @@
 name = "medical-ai"
 main = "src/index.ts"
 compatibility_date = "2024-04-03"
-compatibility_flags = ["nodejs_compat"]
+node_compat = true
 
 # Variable bindings. These are arbitrary, plaintext strings (similar to environment variables)
 # Note: Use secrets to store sensitive data.
@@ -59,8 +59,8 @@ compatibility_flags = ["nodejs_compat"]
 # Bind a KV Namespace. Use KV as persistent storage for small key-value pairs.
 # Docs: https://developers.cloudflare.com/workers/wrangler/configuration/#kv-namespaces
 # [[kv_namespaces]]
-# binding = "MY_KV_NAMESPACE"
-# id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+# binding = "medical-ai-space"
+# id = "2bfa2264b62f40329a4b892e0c92e6e5"
 
 # Bind an mTLS certificate. Use to present a client certificate when communicating with another service.
 # Docs: https://developers.cloudflare.com/workers/wrangler/configuration/#mtls-certificates
@@ -96,3 +96,6 @@ compatibility_flags = ["nodejs_compat"]
 # [[vectorize]]
 # binding = "MY_INDEX"
 # index_name = "my-index"
+
+[ai]
+binding = "AI"
