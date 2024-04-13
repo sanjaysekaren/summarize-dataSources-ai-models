@@ -99,3 +99,7 @@ node_compat = true
 
 [ai]
 binding = "AI"
+
+[[vectorize]]
+binding = "VECTORIZE_INDEX" # available in your Worker on env.VECTORIZE_INDEX
+index_name = "cf-hackathon"
